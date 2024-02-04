@@ -4,7 +4,7 @@ import { frown } from "../emoji.js";
 
 export const data = new SlashCommandBuilder()
     .setName("ignoreme")
-    .setDescription("I will never buttify anything you say.");
+    .setDescription("I will never fuckify anything you say.");
 
 export async function callback(interaction: ChatInputCommandInteraction): Promise<void> {
     await interaction.deferReply();

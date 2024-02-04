@@ -10,7 +10,7 @@ const WhitespacePattern = /\s/;
 
 export const data = new SlashCommandBuilder()
     .setName("word")
-    .setDescription("Use this command to show or change what word I buttify messages with!")
+    .setDescription("Use this command to show or change what word I fuckify messages with!")
     .setDMPermission(false)
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
     .addStringOption(option => {
@@ -19,7 +19,7 @@ export const data = new SlashCommandBuilder()
         }
         return option
             .setName("value")
-            .setDescription(`A new word to buttify with! No spaces, please! The default is ${config.default.word}!`);
+            .setDescription(`A new word to fuckify with! No spaces, please! The default is ${config.default.word}!`);
     });
 
 export async function callback(interaction: ChatInputCommandInteraction<"cached">): Promise<void> {
@@ -33,11 +33,11 @@ export async function callback(interaction: ChatInputCommandInteraction<"cached"
         }
         else {
             await updateGuild(interaction.guildId, { word: newValue });
-            await interaction.editReply(`Buttification word changed to \`${newValue}\`!`);
+            await interaction.editReply(`Fuckification word changed to \`${newValue}\`!`);
         }
     }
     else {
         const guildModel = await getGuild(interaction.guildId);
-        await interaction.editReply(`I buttify messages with the word \`${guildModel?.word ?? config.default.word}\`!`);
+        await interaction.editReply(`I fuckify messages with the word \`${guildModel?.word ?? config.default.word}\`!`);
     }
 }

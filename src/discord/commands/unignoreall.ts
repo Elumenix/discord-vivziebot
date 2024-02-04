@@ -8,7 +8,7 @@ import { smile } from "../emoji.js";
 
 export const data = new SlashCommandBuilder()
     .setName("unignoreall")
-    .setDescription("I'll buttify in every channel!")
+    .setDescription("I'll fuckify in every channel!")
     .setDMPermission(false)
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild);
 

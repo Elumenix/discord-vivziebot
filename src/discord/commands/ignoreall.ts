@@ -7,7 +7,7 @@ import { ignoreChannels, isIgnorable } from "../ignore.js";
 
 export const data = new SlashCommandBuilder()
     .setName("ignoreall")
-    .setDescription("I won't buttify in any channel.")
+    .setDescription("I won't fuckify in any channel.")
     .setDMPermission(false)
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild);
 

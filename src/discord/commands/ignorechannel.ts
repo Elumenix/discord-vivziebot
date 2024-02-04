@@ -8,7 +8,7 @@ import { IgnorableChannelTypes, ignoreChannel } from "../ignore.js";
 
 export const data = new SlashCommandBuilder()
     .setName("ignorechannel")
-    .setDescription("I won't buttify in this channel.")
+    .setDescription("I won't fuckify in this channel.")
     .setDMPermission(false)
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels)
     .addChannelOption(option =>

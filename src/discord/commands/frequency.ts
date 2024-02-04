@@ -8,7 +8,7 @@ import { getGuild, updateGuild } from "../guild.js";
 
 export const data = new SlashCommandBuilder()
     .setName("frequency")
-    .setDescription("Use this command to show or change how often I buttify messages!")
+    .setDescription("Use this command to show or change how often I fuckify messages!")
     .setDMPermission(false)
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
     .addIntegerOption(option => {
@@ -17,7 +17,7 @@ export const data = new SlashCommandBuilder()
         }
         return option
             .setName("value")
-            .setDescription(`A new frequency to buttify messages! The lower this is, the more I'll buttify! The default is ${config.default.frequency}.`)
+            .setDescription(`A new frequency to fuckify messages! The lower this is, the more I'll fuckify! The default is ${config.default.frequency}.`)
             .setMinValue(1);
     });
 
@@ -26,10 +26,10 @@ export async function callback(interaction: ChatInputCommandInteraction<"cached"
     const newValue = interaction.options.getInteger("value");
     if (newValue) {
         await updateGuild(interaction.guildId, { frequency: newValue });
-        await interaction.editReply(`Buttify frequency changed to one in every \`${newValue}\` messages!`);
+        await interaction.editReply(`Fuckify frequency changed to one in every \`${newValue}\` messages!`);
     }
     else {
         const guildModel = await getGuild(interaction.guildId);
-        await interaction.editReply(`I buttify roughly one in every \`${guildModel?.frequency ?? config.default.frequency}\` messages!`);
+        await interaction.editReply(`I fuckify roughly one in every \`${guildModel?.frequency ?? config.default.frequency}\` messages!`);
     }
 }
