@@ -8,7 +8,7 @@
   "author": "elumenix",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf dist/ && tsc",
+    "build": "rm -rf dist/ && tsc",
     "minify": "node minify.js",
     "minbuild": "yarn build && yarn minify",
     "deploy": "node dist/discord/deploy.js",
@@ -30,7 +30,6 @@
     "@types/node": "^20.9.0",
     "dotenv": "^16.3.1",
     "minify": "^9.2.0",
-    "rimraf": "^5.0.5",
     "typescript": "^5.2.2"
   }
 }
