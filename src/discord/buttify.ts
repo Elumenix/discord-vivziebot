@@ -142,7 +142,7 @@ function attempts(rate: number, syllables: number): number {
 
 // To map a custom word to users in HnK
 const userWordMap: Record<string, string> = {
-    "502553322503536640": "Cool" // Elumenix
+    "227543179979784202": "slop" // Prom
 }
 
 export function buttify(
