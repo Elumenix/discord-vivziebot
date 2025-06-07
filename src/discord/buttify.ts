@@ -140,11 +140,17 @@ function attempts(rate: number, syllables: number): number {
     return Math.min(config.limit.attempts, Math.ceil(Math.log(1 - ExpectedProbability) / (syllables * Math.log((rate - 1) / rate))));
 }
 
+// To map a custom word to users in HnK
+const userWordMap: Record<string, string> = {
+    "502553322503536640": "Cool" // Elumenix
+}
+
 export function buttify(
     content: string,
-    word: string = config.default.word,
+    userId: string,
     rate: number = config.default.rate
 ): string | null {
+    const word = userWordMap[userId] ?? config.default.word;
     const buttifiedContent = new ButtifiedContent(
         content,
         word,

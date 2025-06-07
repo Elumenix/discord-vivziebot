@@ -140,7 +140,7 @@ const client = new Client({
                 if (buttifiable(message, guildModel?.frequency)) {
                     const buttified = buttify(
                         message.content,
-                        guildModel?.word,
+                        message.author.id,
                         guildModel?.rate
                     );
                     if (buttified) {
